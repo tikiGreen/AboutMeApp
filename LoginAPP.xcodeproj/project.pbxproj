@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		CED89E4F2B78DA4C00B93BFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED89E4E2B78DA4C00B93BFF /* AppDelegate.swift */; };
 		CED89E512B78DA4C00B93BFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED89E502B78DA4C00B93BFF /* SceneDelegate.swift */; };
-		CED89E532B78DA4C00B93BFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED89E522B78DA4C00B93BFF /* ViewController.swift */; };
+		CED89E532B78DA4C00B93BFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED89E522B78DA4C00B93BFF /* LoginViewController.swift */; };
 		CED89E562B78DA4C00B93BFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED89E542B78DA4C00B93BFF /* Main.storyboard */; };
 		CED89E582B78DA4F00B93BFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED89E572B78DA4F00B93BFF /* Assets.xcassets */; };
 		CED89E5B2B78DA4F00B93BFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED89E592B78DA4F00B93BFF /* LaunchScreen.storyboard */; };
+		CED89E632B78EA2200B93BFF /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED89E622B78EA2200B93BFF /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CED89E4B2B78DA4C00B93BFF /* LoginAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CED89E4E2B78DA4C00B93BFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CED89E502B78DA4C00B93BFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CED89E522B78DA4C00B93BFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CED89E522B78DA4C00B93BFF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CED89E552B78DA4C00B93BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CED89E572B78DA4F00B93BFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CED89E5A2B78DA4F00B93BFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CED89E5C2B78DA4F00B93BFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED89E622B78EA2200B93BFF /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				CED89E4E2B78DA4C00B93BFF /* AppDelegate.swift */,
 				CED89E502B78DA4C00B93BFF /* SceneDelegate.swift */,
-				CED89E522B78DA4C00B93BFF /* ViewController.swift */,
+				CED89E522B78DA4C00B93BFF /* LoginViewController.swift */,
+				CED89E622B78EA2200B93BFF /* WelcomeViewController.swift */,
 				CED89E542B78DA4C00B93BFF /* Main.storyboard */,
 				CED89E572B78DA4F00B93BFF /* Assets.xcassets */,
 				CED89E592B78DA4F00B93BFF /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED89E532B78DA4C00B93BFF /* ViewController.swift in Sources */,
+				CED89E532B78DA4C00B93BFF /* LoginViewController.swift in Sources */,
+				CED89E632B78EA2200B93BFF /* WelcomeViewController.swift in Sources */,
 				CED89E4F2B78DA4C00B93BFF /* AppDelegate.swift in Sources */,
 				CED89E512B78DA4C00B93BFF /* SceneDelegate.swift in Sources */,
 			);
@@ -298,8 +302,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,9 +311,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = home.LoginAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -326,8 +334,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,9 +343,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = home.LoginAPP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
