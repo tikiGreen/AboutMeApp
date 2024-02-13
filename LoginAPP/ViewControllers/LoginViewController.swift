@@ -13,11 +13,8 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     @IBOutlet var loginButton: UIButton!
-    @IBOutlet var forgotUserNameButton: UIButton!
-    @IBOutlet var forgotPasswordButton: UIButton!
     
-    let userName = "1"
-    let password = "1"
+    private let user = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,24 +23,8 @@ final class LoginViewController: UIViewController {
         passwordTextField.text = ""
     }
     
-    @IBAction func unwind(for segue: UIStoryboardSegue) {
-        userNameTextField.text = ""
-        passwordTextField.text = ""
-    }
-    
-    @IBAction func remindUserDetails(_ sender: UIButton) {
-        var message = ""
-        if sender == forgotUserNameButton {
-           message = "User name: \(userName)"
-        } else if sender == forgotPasswordButton {
-           message = "Password: \(password)"
-        }
-       
-        showAlert(title: "Напомнить данные пользователя", message: message)
-    }
-    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        guard userNameTextField.text == userName, passwordTextField.text == password else {
+        guard userNameTextField.text == user.userName, passwordTextField.text == user.password else {
             showAlert(
                 title: "Ошибка авторизации",
                 message: "Не верный логин или пароль"
@@ -55,7 +36,26 @@ final class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let welcomeVC = segue.destination as? WelcomeViewController
-        welcomeVC?.userName = userNameTextField.text
+        welcomeVC?.user = user
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
+    @IBAction func remindUserDetails(_ sender: UIButton) {
+        
+        let message = sender.tag == 0
+        ? "User name: \(user.userName)"
+        : "Password: \(user.password)"
+       
+        showAlert(title: "Напомнить данные пользователя", message: message)
     }
     
     private func showAlert(title: String, message: String) {
@@ -70,10 +70,6 @@ final class LoginViewController: UIViewController {
         present(forgotAlert, animated: true)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
     
 }
 
